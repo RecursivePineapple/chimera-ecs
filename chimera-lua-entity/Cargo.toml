@@ -1,0 +1,20 @@
+[package]
+name = "chimera-lua-entity"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = "1"
+serde_json = "1"
+
+uuid = { version = "1.1", features = ["serde", "v4"] }
+
+mlua = { version = "0.9", features = [ "luau", "unstable", "serialize" ] }
+
+tokio = { version = "1", features = ["sync", "macros"] }
+streamunordered = "0.5"
+tokio-stream = "0.1"
+
+chimera-utils = { path = "../chimera-utils" }
+chimera-ecs = { path = "../chimera-ecs" }
+chimera-core = { path = "../chimera-core" }

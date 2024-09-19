@@ -1,0 +1,27 @@
+[package]
+name = "chimera-ecs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+serde = {version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.1", features = ["serde", "v4"] }
+derivative = "2.2"
+thiserror = "1.0"
+
+tracing = "0.1"
+
+chimera-core = { path = "../chimera-core" }
+chimera-macros = { path = "./chimera-macros" }
+chimera-utils = { path = "../chimera-utils" }
+
+# DOOOOD https://github.com/dtolnay/linkme
+
+[features]
+no_deadlocks = ["chimera-core/no_deadlocks"]
+coroutines = ["chimera-macros/coroutines"]
+macros_trivial_bounds = ["chimera-macros/trivial_bounds"]
+
+default = ["coroutines"]

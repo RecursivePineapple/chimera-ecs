@@ -1,0 +1,20 @@
+[package]
+name = "chimera-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = {version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+derivative = "2.2.0"
+thiserror = "1.0.32"
+uuid = {version = "1.1", features = ["v4", "serde"]}
+itertools = "0.10.5"
+tracing = "0.1.35"
+dyn-clone = "1.0"
+impls = "1.0"
+
+chimera-utils = { path = "../chimera-utils" }
+
+[features]
+no_deadlocks = ["chimera-utils/no_deadlocks"]

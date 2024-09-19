@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "chimera-core",
+    "chimera-server",
+    "chimera-ecs",
+    "chimera-networking",
+    "chimera-utils",
+    "chimera-reify-gdext",
+    "chimera-lua-entity",
+]

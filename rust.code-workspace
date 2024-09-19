@@ -1,0 +1,57 @@
+{
+	"folders": [
+		{
+			"path": "backend"
+		},
+		{
+			"path": "gd-test"
+		},
+		{
+			"path": "vnode-macros"
+		},
+		{
+			"path": "vnode-renderer"
+		},
+		{
+			"name": "VNode Test Project",
+			"path": "/mnt/d/GodotProjects/VNodeRenderTest"
+		},
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "lldb",
+				"request": "launch",
+				"name": "Debug",
+				"program": "cargo",
+				"args": ["build"],
+				"cwd": "${workspaceFolder}/backend"
+			}
+		],
+		"compounds": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"type": "cargo",
+				"command": "build",
+				"problemMatcher": [
+					"$rustc"
+				],
+				"group": "build",
+				"label": "backend: cargo build",
+				"options": {
+					"cwd": "${workspaceFolder}"
+				},
+				"env": {
+					"GD_TEST_OUTPUT_DIR": "/mnt/d/GodotProjects/VNodeRenderTest/test/",
+					"GD_TEST_CLASS_PREFIX": "res://test",
+					"GD_TEST_GDNLIB_PATH": "res://bin/backend.gdnlib",
+				}
+			}
+		]
+	}
+}
